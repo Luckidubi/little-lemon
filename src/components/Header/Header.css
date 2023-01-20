@@ -1,0 +1,85 @@
+.llemon__header {
+  display: flex;
+  gap: 63px;
+  background: var(--bg-primary-green);
+}
+
+.llemon__header-content {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  margin: 0 0 3rem;
+}
+.llemon__header-title h1 {
+  font-family: var(--font-family2);
+  font-style: normal;
+  font-weight: 500;
+  font-size: 64px;
+  margin-bottom: -3rem;
+  color: var(--bg-primary-yellow);
+}
+
+.llemon__header-title p {
+  font-family: var(--font-family2);
+  line-height: 48px;
+  color: var(--bg-secondary-gray);
+  font-weight: 500;
+  font-size: 40px;
+}
+
+.llemon__header-description {
+  font-family: var(--font-family);
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 140.62%;
+  color: var(--bg-secondary-gray);
+  margin-bottom: 3rem;
+}
+.llemon__header-cta button {
+  background: var(--bg-primary-yellow);
+  border-radius: 16px;
+  padding: 1rem;
+  color: var(--bg-secondary-dark);
+  border: 0;
+  cursor: pointer;
+  font-weight: normal;
+  font-family: var(--font-family);
+}
+
+.llemon__header-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.llemon__header-image img {
+  box-sizing: border-box;
+
+  width: 375px;
+  height: 400px;
+}
+
+@media screen and (max-width: 1050px) {
+    .llemon__header {
+      flex-direction: column;
+      gap: 40px;
+    }
+    .llemon__header-content {
+      margin: 0 0 3rem;
+    }
+  }
+
+  @media screen and (max-width: 650px) {
+    .llemon__header-content h1 {
+      font-size: 48px;
+      line-height: 60px;
+    }
+
+    .llemon__header-description {
+      font-size: 16px;
+      line-height: 24px;
+    }
+}
