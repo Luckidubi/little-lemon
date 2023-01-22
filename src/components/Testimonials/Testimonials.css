@@ -1,0 +1,26 @@
+.llemon__Testimonials {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: var(--bg-secondary-gray);
+}
+
+.llemon__Testimonials-title {
+  display: flex;
+  justify-content: center;
+}
+
+.llemon__Testimonials-title h2 {
+  font-family: var(--font-family2);
+  font-style: normal;
+  font-weight: 500;
+  font-size: 36px;
+  line-height: 43px;
+  color: var(--bg-secondary-dark);
+  margin-bottom: 60px;
+}
+.llemon__Testimonials-cards {
+  /* display: flex;
+  flex-direction: row; */
+  gap: 1rem;
+}

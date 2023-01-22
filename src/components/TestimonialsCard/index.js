@@ -1,0 +1,5 @@
+export {default as Roy} from "../../assets/Roy.png"
+export {default as Rita} from "../../assets/Rita.png"
+export {default as Richard} from "../../assets/Richard.png"
+export {default as Ada} from "../../assets/Ada.png"
+export {default as Anna} from "../../assets/Anna.png"

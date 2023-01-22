@@ -1,0 +1,44 @@
+.TestimonialsCard__container{
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    height: 175px;
+    background: #FFFFFF;
+    padding: 1rem;
+    margin-bottom: 2rem;
+}
+.TestimonialsCard__rating{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.TestimonialsCard__info{
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+}
+.TestimonialsCard__info img{
+    width: 46px;
+    height: 46px;
+}
+.TestimonialsCard__info p {
+    font-family: var(--font-family);
+font-style: normal;
+font-weight: 700;
+font-size: 14px;
+line-height: 16px;
+}
+.TestimonialsCard__review{
+    overflow-y: hidden;
+    margin: .5rem 0;
+}
+.TestimonialsCard__review p{
+    font-family: var(--font-family);
+font-style: normal;
+font-weight: 400;
+font-size: 14px;
+line-height: 16px;
+
+
+}
