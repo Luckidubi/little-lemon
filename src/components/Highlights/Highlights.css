@@ -1,0 +1,46 @@
+.llemon__higlights-card{
+    display: flex;
+    flex-direction: row;
+    gap: 34.33px;
+}
+.llemon__highlights-tittle{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.llemon__highlights-tittle h2{
+    font-family: var(--font-family);
+font-style: normal;
+font-weight: 800;
+font-size: 40px;
+line-height: 47px;
+}
+
+.llemon__highlights-tittle button{
+background: var(--bg-primary-yellow);
+  border-radius: 16px;
+  padding: 1rem;
+  color: var(--bg-secondary-dark);
+  border: 0;
+  cursor: pointer;
+  font-weight: bold;
+  font-family: var(--font-family);
+
+  height: 20%;
+}
+
+@media screen and (max-width: 650px) {
+    .llemon__highlights-tittle h2 {
+      font-size: 28px;
+      line-height: 28px;
+    }
+
+    .llemon__highlights-tittle button {
+
+
+        font-weight: bold;
+        min-width: fit-content;
+
+    }
+}

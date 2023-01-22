@@ -1,0 +1,65 @@
+.MenuCard__container {
+  max-width: 265px;
+  border-radius: 16px 16px 0px 0px;
+  margin-bottom: 1rem;
+
+}
+
+
+.MenuCard__imagebox img {
+  border-radius: 16px 16px 0px 0px;
+  max-width: 265px;
+  height: 185px;
+  box-sizing: border-box;
+}
+
+.MenuCard__details{
+    padding: 1rem;
+    margin-top: -.3rem;
+  background: var(--bg-secondary-gray);
+}
+
+.MenuCard__dish-price {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: -1rem;
+}
+
+.MenuCard__dish-price p {
+  font-family: var(--font-family2);
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 90%;
+  margin-top: 1.5rem;
+}
+
+.MenuCard__dish-price p:nth-child(2) {
+  font-family: var(--font-family);
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 90%;
+  color: var(--bg-secondary-brown);
+  margin-top: 1.6rem;
+}
+
+.MenuCard__description {
+  font-family: var(--font-family);
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  color: var(--bg-primary-green);
+}
+
+.MenuCard__order{
+    font-family: var(--font-family);
+font-style: normal;
+font-weight: 700;
+font-size: 16px;
+line-height: 19px;
+
+}
