@@ -1,0 +1,153 @@
+.llemon__footer-container {
+  display: flex;
+  background: var(--bg-secondary-gray);
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 1rem;
+}
+.llemon__footer-logo {
+  flex: 1;
+}
+.llemon__footer-logo img {
+  max-width: 162px;
+  max-height: 179px;
+}
+
+.llemon__footer-navigation {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+
+  font-family: var(--font-family);
+  align-items: center;
+
+  padding: 0.2rem;
+  gap: 1px;
+  width: 100%;
+}
+
+.llemon__footer-navigation h4 {
+  font-family: var(--font-family);
+  font-style: normal;
+  font-weight: 800;
+  font-size: 20px;
+  line-height: 23px;
+  color: var(--bg-primary-green);
+}
+
+.llemon__footer-navigation p{
+    font-family: var(--font-family);
+font-style: normal;
+font-weight: 500;
+font-size: 20px;
+cursor: pointer;
+}
+.llemon__footer-navigation p:hover{
+    text-decoration: underline;
+}
+
+.llemon__footer-contact{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+
+    font-family: var(--font-family);
+    align-items: center;
+
+    padding: 0.2rem;
+    gap: 1px;
+    width: 100%;
+}
+
+.llemon__footer-contact h4{
+    font-family: var(--font-family);
+    font-style: normal;
+    font-weight: 800;
+    font-size: 20px;
+    line-height: 23px;
+    color: var(--bg-primary-green);
+}
+
+.llemon__footer-contact p{
+    font-family: var(--font-family);
+font-style: normal;
+font-weight: 500;
+font-size: 20px;
+cursor: pointer;
+}
+
+.llemon__footer-contact p:hover{
+    text-decoration: underline;
+}
+
+
+.llemon__footer-social{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+
+    font-family: var(--font-family);
+    align-items: center;
+
+    padding: 0.2rem;
+    gap: 1px;
+    width: 100%;
+}
+
+.llemon__footer-social h4{
+    font-family: var(--font-family);
+    font-style: normal;
+    font-weight: 800;
+    font-size: 20px;
+    line-height: 23px;
+    color: var(--bg-primary-green);
+}
+
+.llemon__footer-social p{
+    font-family: var(--font-family);
+font-style: normal;
+font-weight: 500;
+font-size: 20px;
+cursor: pointer;
+}
+
+.llemon__footer-social p:hover{
+    text-decoration: underline;
+}
+
+@media screen and (max-width: 1050px) {
+    .llemon__footer-container {
+      display: grid;
+      gap: 0.3rem;
+      grid-template-columns: repeat(3, 1fr);
+      grid-auto-flow: dense;
+    }
+    .llemon__footer-logo {
+      align-items: center;
+      order: 3;
+     align-self: center;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    .llemon__footer-container {
+      grid-template-columns: repeat(2, 1fr);
+      grid-auto-flow: dense;
+    }
+    .llemon__footer-logo {
+
+        order: 3;
+       align-self: center;
+      }
+  }
+  @media screen and (max-width: 650px) {
+    .llemon__footer-container {
+      grid-template-columns: repeat(1, 1fr);
+    }
+    .llemon__footer-logo {
+
+        order: 3;
+       align-self: center;
+      }
+  }
