@@ -1,9 +1,10 @@
-import {useState} from 'react'
-import "./Navbar.css"
-import Logo from "../../assets/Logo.svg"
-import hambuger from "../../assets/hambuger.svg"
-function Navbar() {
+import { useState } from "react";
+import "./Navbar.css";
+import Logo from "../../assets/Logo.svg";
+import hambuger from "../../assets/hambuger.svg";
+import { Link } from "react-router-dom";
 
+function Navbar() {
   const [toggleMenu, setToggleMenu] = useState(false);
   const handleToggle = () => {
     setToggleMenu((t) => !t);
@@ -11,44 +12,51 @@ function Navbar() {
   const Menu = () => {
     return (
       <>
-  <li>Home</li>
-            <li>About</li>
-            <li>Menu</li>
-            <li>Reservations</li>
-            <li>Order Online</li>
-            <li>Login</li>
+         <Link to="/"><p>
+         Home
+        </p></Link>
+        <a href="#About"><p>
+          About
+        </p></a>
+        <a href="#Menu"><p>Menu</p></a>
+        <Link to="/booking">  <p>Reservations</p></Link>
+        <Link to='/order'> <p>Order Online</p></Link>
+        <p>Login</p>
       </>
     );
   };
 
   return (
     <>
-    <nav className='llemon__navbar'>
-        <img src={Logo} alt="Little Lemon Logo"/>
-        <div className='llemon__navbar-links_container'>
-        <ul className="llemon__navbar-links">
-<Menu/>
-        </ul>
+      <nav className="llemon__navbar">
+       <Link to="/"> <img src={Logo} alt="Little Lemon Logo" /></Link>
+        <div className="llemon__navbar-links_container">
+          <div className="llemon__navbar-links">
+            <Menu />
+          </div>
         </div>
         <div className="llemon__navbar-menu">
-        {toggleMenu ? (
+          {toggleMenu ? (
             <div onClick={handleToggle}>X</div>
           ) : (
-            <img src={hambuger} style={{width:"24px", height:"24px"}} alt="hambuger icon" onClick={handleToggle} />
+            <img
+              src={hambuger}
+              style={{ width: "24px", height: "24px" }}
+              alt="hambuger icon"
+              onClick={handleToggle}
+            />
           )}
-           {toggleMenu && (
+          {toggleMenu && (
             <div className="llemon__navbar-menu_container scale-up-center">
-            <div className="llemon__navbar-menu_container-links">
-            <Menu/>
+              <div className="llemon__navbar-menu_container-links">
+                <Menu />
+              </div>
             </div>
-         </div>
-           )}
+          )}
         </div>
-
-    </nav>
-
+      </nav>
     </>
-  )
+  );
 }
 
-export default Navbar
+export default Navbar;

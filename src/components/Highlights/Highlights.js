@@ -22,7 +22,7 @@ function Highlights() {
   };
   return (
     <>
-      <section className="llemon__highlights section__padding">
+      <section id="Menu" className="llemon__highlights section__padding">
         <div className="llemon__highlights-tittle">
           <h2>This week's Specials</h2>
           <button>Online Menu</button>
