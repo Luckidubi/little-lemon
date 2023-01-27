@@ -1,18 +1,26 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
-import { BrowserRouter as Router } from 'react-router-dom';
-import {ChakraProvider} from "@chakra-ui/react"
-const root = ReactDOM.createRoot(document.getElementById('root'));
+import React from "react";
+import ReactDOM from "react-dom/client";
+import "./index.css";
+import App from "./App";
+import reportWebVitals from "./reportWebVitals";
+import { BrowserRouter as Router } from "react-router-dom";
+import { ChakraProvider } from "@chakra-ui/react";
+import { BookingProvider } from "./context/BookingContext";
+import { AlertProvider } from "./context/AlertContext";
+import Alert from "./components/Alert";
+const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <Router>
-  <React.StrictMode>
-    <ChakraProvider>
-    <App />
-    </ChakraProvider>
-  </React.StrictMode>
+    <React.StrictMode>
+      <ChakraProvider>
+        <AlertProvider>
+        <BookingProvider>
+          <App />
+        </BookingProvider>
+<Alert/>
+        </AlertProvider>
+      </ChakraProvider>
+    </React.StrictMode>
   </Router>
 );
 

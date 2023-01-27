@@ -1,4 +1,3 @@
-import React from "react";
 import {
   Box,
   Button,
@@ -10,70 +9,77 @@ import {
   Select,
   HStack,
   VStack,
+
 } from "@chakra-ui/react";
 import { useFormik } from "formik";
+import { useNavigate } from "react-router-dom";
 import * as Yup from "yup";
-import { useNumberInput } from "@chakra-ui/react";
+import { useBookingContext } from "../../context/BookingContext";
 
-function BookingForm() {
-  const { getInputProps, getIncrementButtonProps, getDecrementButtonProps } =
-    useNumberInput({
-      step: 1,
-      defaultValue: 1,
-      min: 1,
-      max: 10,
-      precision: 0,
-    });
 
-  const inc = getIncrementButtonProps();
-  const dec = getDecrementButtonProps();
-  const input = getInputProps();
 
-  const availableTimes = ["17:00", "18:00", "19:00", "20:00", "21:00", "22:00"];
+
+function BookingForm({ availableTimes, updateTimes }) {
+
+const {updateBookings} = useBookingContext();
+
+const navigate =  useNavigate()
+
   const selectTime = availableTimes.map((t, i) => (
     <option key={i + "asdsd54"} value={t}>
       {t}
     </option>
   ));
-  const getCurrentLocalDate = () => {
-    const tzoffset = new Date().getTimezoneOffset() * 60000;
-    return new Date(Date.now() - tzoffset);
+
+
+  const getDateFormat = () => {
+    const date = new Date();
+    const year = date.getFullYear();
+    const month = (1 + date.getMonth()).toString().padStart(2, "0");
+    const day = date.getDate().toString().padStart(2, "0");
+    return year + "-" + month + "-" + day;
   };
+
+  const handleDateChange = (e) => {
+    updateTimes(new Date(e.target.value));
+
+  };
+
+
 
   const formik = useFormik({
     initialValues: {
       date: "",
       time: "",
       guests: "",
-      occasion: "",
+      occasion: "Birthday",
     },
-    onSubmit: async (values) => {
-      //   await submit(values);
+    onSubmit:  async (values) => {
+      await updateBookings(values)
+
+
+        navigate("/confirmed");
       console.log(values);
+
+
     },
     validationSchema: Yup.object({
-      date: Yup.date()
-        .required("Required")
-        .transform((value, originalValue) => {
-          return originalValue === "" ? undefined : new Date(originalValue);
-        })
-
-        .min(getCurrentLocalDate() - 86400000, "You cannot choose a past date"),
+      date: Yup.date().required("Required"),
       time: Yup.string().required("Required"),
       guests: Yup.number()
         .required("Required")
         .min(1, "Minimum guests is 1")
-        .max(8, "Maximum guests is 10"),
-      occasion:
-        Yup.string()
-        .required("Required"),
+        .max(8, "Maximum guests is 8"),
+      occasion: Yup.string().required("Required"),
     }),
   });
   return (
     <>
       <section className="llemon__BookingForm section__padding">
-        <VStack minW="280px" maxW="768px" p={10} alignItems="flex-start">
-          <Heading as="h1">Reserve a Table</Heading>
+        <VStack minW="280px" maxW="768px" p={4} alignItems="flex-start">
+          <Heading id="booking-heading" color="var(--bg-primary-green)" as="h1">
+            Reserve a Table
+          </Heading>
           <Box p={6} rounded="md" w="100%">
             <form onSubmit={formik.handleSubmit}>
               <VStack spacing={4}>
@@ -85,7 +91,12 @@ function BookingForm() {
                     id="date"
                     name="date"
                     type="date"
-                    {...formik.getFieldProps("date")}
+                    min={getDateFormat()}
+                    onChange={(e) => {
+                      formik.handleChange(e);
+                      handleDateChange(e);
+                    }}
+                    value={formik.values.date}
                   />
                   <FormErrorMessage>{formik.errors.date}</FormErrorMessage>
                 </FormControl>
@@ -96,6 +107,7 @@ function BookingForm() {
                   <Select
                     id="time"
                     name="time"
+                    placeholder="Select Time"
                     {...formik.getFieldProps("time")}
                   >
                     {selectTime}
@@ -106,16 +118,12 @@ function BookingForm() {
                   isInvalid={formik.touched.guests && formik.errors.guests}
                 >
                   <FormLabel htmlFor="guests">Number of Guests</FormLabel>
-                  <HStack maxW="320px">
-                    <Button {...inc}>+</Button>
-                    <Input
-                      name="guests"
-                      id="guests"
-                      {...formik.getFieldProps("guests")}
-                      {...input}
-                    />
-                    <Button {...dec}>-</Button>
-                  </HStack>
+<HStack>
+
+<input type="number" step={1} style={{width:"100%", border:"1px solid", padding:".5rem", borderRadius:"5px"}} id="guests" name="guests" {...formik.getFieldProps("guests")} min={1} max={10} placeholder="Enter Number of Guests"/>
+
+
+</HStack>
                   <FormErrorMessage>{formik.errors.guests}</FormErrorMessage>
                 </FormControl>
                 <FormControl
@@ -125,18 +133,19 @@ function BookingForm() {
                   <Select
                     id="ocassion"
                     name="ocassion"
-                    {...formik.getFieldProps("ocassion")}
+                    {...formik.getFieldProps("occasion")}
                   >
-                    <option>Birthday</option>
-                    <option>Anniversary</option>
+                    <option value="Birthday">Birthday</option>
+                    <option value="Engagement">Engagement</option>
+                    <option value="Anniversary">Anniversary</option>
                   </Select>
                   <FormErrorMessage>{formik.errors.occasion}</FormErrorMessage>
                 </FormControl>
 
                 <Button
-                  isLoading={"isLoading"}
+
                   type="submit"
-                  colorScheme="purple"
+                  colorScheme="yellow"
                   width="full"
                 >
                   Make Your reservation
