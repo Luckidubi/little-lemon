@@ -21,10 +21,10 @@ export const BookingProvider = ({ children }) => {
     }))
   }
 
-  console.log(booking)
+  
 
   return (
-    <BookingContext.Provider value={{ booking, setBooking, updateBookings }}>
+    <BookingContext.Provider value={{ booking, updateBookings }}>
       {children}
     </BookingContext.Provider>
   );

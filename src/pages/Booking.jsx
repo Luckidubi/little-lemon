@@ -1,9 +1,12 @@
-import {useState} from 'react'
+import {useEffect, useState} from 'react'
 import { fetchAPI } from '../api/BookingApi';
 import BookingForm from '../components/BookingForm/BookingForm'
 
 function Booking() {
   const [availableTimes, setAvailableTimes] = useState(["17:00","18:00","19:00","20:00","21:00","22:00"]);
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   const updateTimes = (date) => {
     // logic to update available times based on selected date
