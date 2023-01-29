@@ -14,7 +14,7 @@ import {
 import { useBookingContext } from "../../context/BookingContext";
 import { useAlertContext } from "../../context/AlertContext";
 import { useNavigate } from "react-router-dom";
-
+import "./ConfirmedBooking.css"
 function ConfirmedBooking() {
   const { isLoading, response, submit } = useSubmit();
   const { booking } = useBookingContext();
@@ -45,9 +45,9 @@ function ConfirmedBooking() {
             Booking Confirmation
           </Heading>
           <Box p={6} rounded="md" w="100%">
-            <TableContainer mb={4}>
-              <Table variant="simple">
-                <TableCaption>Table Reservation Options</TableCaption>
+            <TableContainer fontFamily='var(--font-family)' mb={4}>
+              <Table variant="striped">
+                <TableCaption>Table Reservation Choice</TableCaption>
                 <Thead>
                   <Tr>
                     <Th>Bookings</Th>
@@ -85,6 +85,7 @@ function ConfirmedBooking() {
               colorScheme="yellow"
               width="full"
               onClick={handleSubmit}
+              fontFamily="var(--font-family)"
             >
               Confirm Reservation
             </Button>
