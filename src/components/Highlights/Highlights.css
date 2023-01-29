@@ -1,7 +1,7 @@
 .llemon__higlights-card{
     display: flex;
     flex-direction: row;
-    gap: 34.33px;
+    gap: 2px;
 }
 .llemon__highlights-tittle{
     display: flex;
@@ -32,7 +32,7 @@ background: var(--bg-primary-yellow);
 
 @media screen and (max-width: 650px) {
     .llemon__highlights-tittle h2 {
-      font-size: 28px;
+      font-size: 22px;
       line-height: 28px;
     }
 

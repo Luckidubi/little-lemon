@@ -17,7 +17,7 @@
   font-style: normal;
   font-weight: 500;
   font-size: 64px;
-  margin-bottom: -3rem;
+  margin-bottom:  -2rem;
   color: var(--bg-primary-yellow);
 }
 
@@ -36,7 +36,8 @@
   font-size: 20px;
   line-height: 140.62%;
   color: var(--bg-secondary-gray);
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
+  margin-top: 1rem;
 }
 .llemon__header-cta button {
   background: var(--bg-primary-yellow);
@@ -47,6 +48,11 @@
   cursor: pointer;
   font-weight: normal;
   font-family: var(--font-family);
+}
+
+.llemon__header-cta button:hover {
+background: var(--bg-secondary-dark);
+color: var(--bg-secondary-gray);
 }
 
 .llemon__header-image {
@@ -76,6 +82,7 @@
     .llemon__header-content h1 {
       font-size: 48px;
       line-height: 60px;
+      margin-bottom: -1rem;
     }
 
     .llemon__header-description {

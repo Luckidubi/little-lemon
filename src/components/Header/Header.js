@@ -1,7 +1,9 @@
 import React from 'react'
 import headerImg from "../../assets/restauranfood.jpg"
 import "./Header.css"
+import {useNavigate} from "react-router-dom"
 function Header() {
+  const navigate = useNavigate()
   return (
     <>
 <section className="llemon__header section__padding">
@@ -11,10 +13,10 @@ function Header() {
 <p>Chicago</p>
   </div>
   <div className='llemon__header-description'>
-    <p>Lorem ipsum Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+    <p>We are a family owned Mediterranean restaurant, located on Maldove Street in Chicago, Illionis. We focus on traditional recipes served with a modern twist.</p>
   </div>
 <div className='llemon__header-cta'>
-<button>Reserve a Table</button>
+<button onClick={()=>navigate("/booking")}>Reserve a Table</button>
 </div>
 </div>
 <div className='llemon__header-image'>

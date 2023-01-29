@@ -3,7 +3,30 @@ import MenuCard from "../MenuCard/MenuCard";
 import "./Highlights.css";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
+import {greekSalad, bruschetta, lemonDessert} from "./index"
 function Highlights() {
+
+  const highlights = [
+    {
+        name: 'Greek Salad',
+        price: '12.99$',
+        desc: 'This easy Greek salad recipe is our new favorite summer side dish! Just 7 ingredients make it refreshing & delicious.',
+        image: greekSalad
+    },
+    {
+        name: 'Bruschetta',
+        price: '5.99$',
+        desc: 'Bruschetta is a classic Italian appetizer that is easy to make at home. Toasted bread is topped with tomatoes, Parmesan cheese, garlic, and fresh basil.',
+        image: bruschetta
+    },
+    {
+        name: 'Lemon Dessert',
+        price: '5.00$',
+        desc: 'Pretty as a picture, this syrup-soaked lemon cake has a secret ingredient.',
+        image: lemonDessert
+    }
+]
+
   const responsive = {
     desktop: {
       breakpoint: { max: 3000, min: 1024 },
@@ -20,11 +43,12 @@ function Highlights() {
       slidesToSlide: 1, // optional, default to 1.
     },
   };
+
   return (
     <>
       <section id="Menu" className="llemon__highlights section__padding">
         <div className="llemon__highlights-tittle">
-          <h2>This week's Specials</h2>
+          <h2>Specials</h2>
           <button>Online Menu</button>
         </div>
         {/* <div className="llemon__higlights-card"> */}
@@ -39,10 +63,16 @@ function Highlights() {
           dotListClass="custom-dot-list-style"
 
         >
-          <MenuCard />
-          <MenuCard />
-          <MenuCard />
-          <MenuCard />
+         {highlights.map((item,index) => (
+         <MenuCard
+         key={index + "ef48"}
+          img={item.image}
+          name={item.name}
+          price={item.price}
+          desc={item.desc}
+
+          />
+         ))}
 
         </Carousel>
 

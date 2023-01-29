@@ -21,15 +21,16 @@ function Footer() {
         </div>
         <div className="llemon__footer-contact">
           <h4>Contact</h4>
-          <p>Address</p>
-          <p>Phone Number</p>
-          <p>Email</p>
+          <p>2395 Maldove Way,
+Chicago Illinois</p>
+          <p>+12445345345</p>
+          <p>support@littlelemon.com</p>
         </div>
         <div className="llemon__footer-social">
           <h4>Social Media Links</h4>
-          <p>Address</p>
-          <p>Phone Number</p>
-          <p>Email</p>
+          <p>Instagram</p>
+          <p>Facebook</p>
+          <p>Twitter</p>
         </div>
       </section>
     </>
