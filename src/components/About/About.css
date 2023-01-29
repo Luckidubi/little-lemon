@@ -18,7 +18,7 @@
   font-style: normal;
   font-weight: 500;
   font-size: 64px;
-  margin-bottom: -3rem;
+  margin-bottom: -2rem;
 }
 
 .llemon__About-title p {
@@ -36,7 +36,7 @@
     font-size: 20px;
     line-height: 23px;
     color: var(--bg-secondary-dark);
-    margin-bottom: 3rem;
+    margin-top: 2rem;
 }
 
 .llemon__About-image{
@@ -48,13 +48,13 @@
 .llemon__About-image img{
     box-sizing: border-box;
     width: 447px;
-    
+
 }
 
 @media screen and (max-width: 1050px) {
     .llemon__About {
       flex-direction: column;
-      gap: 5px;
+      gap: 10px;
     }
     .llemon__About-content {
       margin: 0 0 -2rem;
@@ -66,13 +66,16 @@
     .llemon__About-content h1 {
       font-size: 48px;
       line-height: 60px;
+      margin-bottom: -1rem;
     }
 
     .llemon__About-description {
       font-size: 16px;
       line-height: 24px;
+      margin-bottom: 3rem
     }
     .llemon__About-image img{
         width: 100%;
+
     }
 }
