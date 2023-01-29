@@ -15,7 +15,7 @@ import { useFormik } from "formik";
 import { useNavigate } from "react-router-dom";
 import * as Yup from "yup";
 import { useBookingContext } from "../../context/BookingContext";
-
+import "./BookingForm.css"
 
 
 
@@ -147,6 +147,7 @@ const navigate =  useNavigate()
                   type="submit"
                   colorScheme="yellow"
                   width="full"
+                  
                 >
                   Make Your reservation
                 </Button>

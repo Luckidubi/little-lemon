@@ -1,0 +1,21 @@
+.llemon__BookingForm select{
+font-family: var(--font-family);
+}
+.llemon__BookingForm h1{
+    font-family: var(--font-family2);
+
+}
+.llemon__BookingForm label{
+    font-family: var(--font-family2);
+    font-size: 24px;
+}
+
+.llemon__BookingForm input::placeholder{
+    font-family: var(--font-family);
+}
+
+.llemon__BookingForm button{
+    font-family: var(--font-family);
+    font-size: 20px;
+    margin-top: 2rem;
+}
