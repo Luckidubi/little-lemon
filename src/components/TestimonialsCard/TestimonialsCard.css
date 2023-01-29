@@ -1,11 +1,12 @@
 .TestimonialsCard__container{
     display: flex;
     flex-direction: column;
-    width: 200px;
-    height: 175px;
+    width: 260px;
+    height: 200px;
     background: #FFFFFF;
     padding: 1rem;
-    margin-bottom: 2rem;
+    margin-bottom: 3rem;
+gap: 5px;
 }
 .TestimonialsCard__rating{
     display: flex;
@@ -28,9 +29,10 @@ font-style: normal;
 font-weight: 700;
 font-size: 14px;
 line-height: 16px;
+align-self: center;
 }
 .TestimonialsCard__review{
-    overflow-y: hidden;
+    /* overflow-y: scroll; */
     margin: .5rem 0;
 }
 .TestimonialsCard__review p{

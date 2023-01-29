@@ -1,23 +1,20 @@
 import React from "react";
-import GreekSalad from "../../assets/greek salad.jpg";
 import "./MenuCard.css";
-function MenuCard() {
+function MenuCard({img, name, desc, price}) {
   return (
     <>
       <div className="MenuCard__container">
         <div className="MenuCard__imagebox">
-          <img src={GreekSalad} alt="dish" />
+          <img src={img} alt="dish" />
         </div>
         <div className="MenuCard__details">
         <div className="MenuCard__dish-price">
-          <p>Greek salad</p>
-          <p id="price">$12.99</p>
+          <p>{name}</p>
+          <p id="price">{price}</p>
         </div>
         <div className="MenuCard__description">
           <p>
-            The famous greek salad of crispy lettuce, peppers, olives and our
-            Chicago style feta cheese, garnished with crunchy garlic and
-            rosemary croutons.{" "}
+            {desc}
           </p>
         </div>
         <div className="MenuCard__order">

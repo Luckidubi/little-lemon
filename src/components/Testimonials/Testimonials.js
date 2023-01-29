@@ -8,11 +8,11 @@ import { Roy, Rita, Richard, Anna, Ada } from "../TestimonialsCard/index";
 const UserInfo = [
   {
     id: "0r3jfljk67",
-    rating: 3,
+    rating: 5,
     photo: Roy,
     name: "Roy",
     review:
-      "Lorem iAmet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.",
+      "This is the best Mediterranean food that I've ever had!.",
   },
   {
     id: "045jsljfe7",
@@ -20,7 +20,7 @@ const UserInfo = [
     photo: Rita,
     name: "Rita",
     review:
-      "Lorem iAmet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.",
+      "The food here was fire!! Everyone should try this place out at least once if they live in Chicago.",
   },
   {
     id: "0r3jsdfgsdf7",
@@ -28,15 +28,15 @@ const UserInfo = [
     photo: Richard,
     name: "Richard",
     review:
-      "Lorem iAmet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.",
+      "Great food, welcoming staff, cozy atmosphere. A great place to treat your kids to.",
   },
   {
     id: "0r35eejk67",
-    rating: 4,
+    rating: 5,
     photo: Anna,
     name: "Anna",
     review:
-      "Lorem iAmet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.",
+      "I've had some great Mediterranean food before, but none of them beats Little Lemon in flavor and texture.",
   },
   {
     id: "043j5g5gtk0",
@@ -44,7 +44,7 @@ const UserInfo = [
     photo: Ada,
     name: "Ada",
     review:
-      "Lorem iAmet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.",
+      "The food here really refreshed me after a late night shift ",
   },
 ];
 function Testimonials() {
