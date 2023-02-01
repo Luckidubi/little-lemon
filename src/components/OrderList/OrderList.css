@@ -1,0 +1,62 @@
+.llemon__OrderList{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+}
+
+.llemon__OrderList-title h1{
+    font-family: var(--font-family2);
+    font-size: 48px;
+    color: var(--bg-primary-green);
+}
+
+.llemon__OrderList-container{
+display: flex;
+flex-direction: row;
+gap: 1rem;
+flex-wrap: wrap;
+align-items: center;
+
+}
+
+.llemon_OrderList-sidebar{
+    display: flex;
+}
+
+.llemon_OrderList-sidebar main{
+flex: 1;
+ overflow:auto;
+
+}
+
+.llemon_OrderList-sidebar aside{
+    border-left:1px solid ;
+    width: 30%;
+
+}
+
+.llemon_OrderList-sidebar aside>h2{
+    text-align: center;
+    font-family: var(--font-family2);
+    font-size: 32px;
+}
+
+.llemon__OrderList-search input{
+width: 100%;
+font-family: var(--font-family);
+margin-bottom: 2rem;
+}
+.llemon__OrderList-search input:focus-visible{
+    border-color: var(--bg-secondary-brown) ;
+    box-shadow: 0 0 0 1px var(--bg-secondary-brown);
+
+}
+
+@media screen and (max-width: 650px) {
+    .llemon__OrderList-container{
+       flex-direction: column;
+       gap:.1rem;
+
+    }
+   }
