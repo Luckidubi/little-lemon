@@ -8,16 +8,19 @@ import { ChakraProvider } from "@chakra-ui/react";
 import { BookingProvider } from "./context/BookingContext";
 import { AlertProvider } from "./context/AlertContext";
 import Alert from "./components/Alert";
+import { MenuProvider } from "./context/MenuContext";
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <Router>
     <React.StrictMode>
       <ChakraProvider>
         <AlertProvider>
-        <BookingProvider>
-          <App />
-        </BookingProvider>
-<Alert/>
+          <BookingProvider>
+            <MenuProvider>
+              <App />
+            </MenuProvider>
+          </BookingProvider>
+          <Alert />
         </AlertProvider>
       </ChakraProvider>
     </React.StrictMode>
