@@ -7,6 +7,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-bottom: 2rem;
 }
 
 .llemon__highlights-tittle h2{
@@ -28,6 +29,11 @@ background: var(--bg-primary-yellow);
   font-family: var(--font-family);
 
   height: 20%;
+}
+
+.llemon__highlights-tittle button:hover{
+    background: var(--bg-secondary-dark);
+color: var(--bg-secondary-gray);
 }
 
 @media screen and (max-width: 650px) {

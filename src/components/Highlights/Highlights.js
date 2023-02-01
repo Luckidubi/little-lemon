@@ -3,8 +3,10 @@ import MenuCard from "../MenuCard/MenuCard";
 import "./Highlights.css";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
+import {useNavigate} from "react-router-dom"
 import {greekSalad, bruschetta, lemonDessert} from "./index"
 function Highlights() {
+  const navigate = useNavigate()
 
   const highlights = [
     {
@@ -49,7 +51,7 @@ function Highlights() {
       <section id="Menu" className="llemon__highlights section__padding">
         <div className="llemon__highlights-tittle">
           <h2>Specials</h2>
-          <button>Online Menu</button>
+          <button onClick={()=>navigate("/online-menu")}>Online Menu</button>
         </div>
         {/* <div className="llemon__higlights-card"> */}
         <Carousel
