@@ -1,0 +1,19 @@
+.CartItem-list {
+    /* Content is center horizontally */
+    align-items: center;
+    display: flex;
+   font-family: var(--font-family);
+
+    border-bottom: 1px solid #d1d5db;
+
+    /* Spacing */
+    margin: 0;
+    padding: 0.25rem 0;
+}
+.CartItem-list__key {
+    /* Take the available width */
+    flex: 1;
+}
+.CartItem-list__value {
+    margin-left: 0.5rem;
+}
