@@ -12,7 +12,7 @@ function MenuCard({img, name, desc, price}) {
         <div className="MenuCard__details">
         <div className="MenuCard__dish-price">
           <p>{name}</p>
-          <p id="price">{price}</p>
+          <p id="price">${price}</p>
         </div>
         <div className="MenuCard__description">
           <p>

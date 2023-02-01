@@ -11,19 +11,19 @@ function Highlights() {
   const highlights = [
     {
         name: 'Greek Salad',
-        price: '12.99$',
+        price: '12.99',
         desc: 'This easy Greek salad recipe is our new favorite summer side dish! Just 7 ingredients make it refreshing & delicious.',
         image: greekSalad
     },
     {
         name: 'Bruschetta',
-        price: '5.99$',
+        price: '5.99',
         desc: 'Bruschetta is a classic Italian appetizer that is easy to make at home. Toasted bread is topped with tomatoes, Parmesan cheese, garlic, and fresh basil.',
         image: bruschetta
     },
     {
         name: 'Lemon Dessert',
-        price: '5.00$',
+        price: '5.00',
         desc: 'Pretty as a picture, this syrup-soaked lemon cake has a secret ingredient.',
         image: lemonDessert
     }
@@ -53,13 +53,11 @@ function Highlights() {
           <h2>Specials</h2>
           <button onClick={()=>navigate("/online-menu")}>Online Menu</button>
         </div>
-        {/* <div className="llemon__higlights-card"> */}
         <Carousel
           responsive={responsive}
-           // means to render carousel on server-side.
           keyBoardControl={true}
           showDots={true}
-
+          ssr={true}
           containerClass="carousel-container"
           removeArrowOnDeviceType={["mobile"]}
           dotListClass="custom-dot-list-style"
@@ -78,7 +76,6 @@ function Highlights() {
 
         </Carousel>
 
-        {/* </div> */}
       </section>
     </>
   );
