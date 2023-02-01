@@ -1,5 +1,7 @@
 import React from "react";
 import "./MenuCard.css";
+import delivery from "../../assets/delivery.png"
+import { Link } from "react-router-dom";
 function MenuCard({img, name, desc, price}) {
   return (
     <>
@@ -18,7 +20,7 @@ function MenuCard({img, name, desc, price}) {
           </p>
         </div>
         <div className="MenuCard__order">
-          <p>Order a delivery</p>
+         <Link to="/order"><p>Order a delivery</p></Link> <img src={delivery} alt="delivery"/>
         </div>
         </div>
 

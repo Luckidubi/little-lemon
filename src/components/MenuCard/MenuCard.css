@@ -3,16 +3,24 @@
   border-radius: 16px 16px 0px 0px;
   margin-bottom: 2rem;
   margin-top: 1rem;
+  cursor: pointer;
 
 
 }
 
+.MenuCard__container:hover{
+ box-shadow:  0 3px 10px rgb(0 0 0 / 0.2);
+}
 
 .MenuCard__imagebox img {
   border-radius: 16px 16px 0px 0px;
   width: 265px;
   height: 185px;
   box-sizing: border-box;
+}
+
+.MenuCard__imagebox img:hover{
+opacity: .7;
 }
 
 .MenuCard__details{
@@ -75,5 +83,15 @@ margin-bottom: -1rem;
 position: absolute;
 
 bottom: 2rem;
+display:flex;
+align-items: flex-end;
 
+gap: 1rem;
+
+}
+.MenuCard__order img{
+  width: 24px;
+}
+.MenuCard__order a:hover{
+  text-decoration: underline;
 }
