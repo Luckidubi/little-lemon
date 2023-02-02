@@ -2,8 +2,12 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 2rem 6rem;
+  padding: 1rem 6rem;
   gap: 9%;
+  position: sticky;
+  top: 0;
+  background: #ffffff;
+z-index: 1;
 }
 
 .llemon__navbar-links {
