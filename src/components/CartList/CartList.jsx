@@ -6,8 +6,10 @@ import "./CartList.css";
 function CartList() {
   const { cart } = useMenuContext();
 
-  const total = cart.map(item => item.price * item.quantity)
-  .reduce((acc, value) => acc + value, 0).toFixed(2);
+  const total = cart
+    .map((item) => item.price * item.quantity)
+    .reduce((acc, value) => acc + value, 0)
+    .toFixed(2);
   return (
     <>
       <section className="llemon-CartList section__padding">

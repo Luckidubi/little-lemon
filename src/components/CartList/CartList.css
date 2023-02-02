@@ -12,7 +12,7 @@ gap: 2rem;
 }
 
 .llemon-CartList__container p{
-    word-wrap: none;
+   width: fit-content;
     font-family: var(--font-family);
    letter-spacing: -1px;
    margin: 1em -1em;
