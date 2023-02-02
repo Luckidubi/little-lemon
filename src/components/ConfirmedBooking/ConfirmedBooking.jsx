@@ -13,7 +13,8 @@ import {
 } from "@chakra-ui/react";
 import { useBookingContext } from "../../context/BookingContext";
 import { useAlertContext } from "../../context/AlertContext";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import Recent from "../../assets/Recent.svg"
 import "./ConfirmedBooking.css"
 function ConfirmedBooking() {
   const { isLoading, response, submit } = useSubmit();
@@ -41,7 +42,7 @@ function ConfirmedBooking() {
     <>
       <section className="llemon__ConfirmedBooking section__padding">
         <VStack minW="280px" maxW="768px" p={4} alignItems="flex-start">
-          <Heading color="var(--bg-primary-green)" as="h1">
+        <Link onClick={()=>navigate(-1)}><img src={Recent} alt="Go back"/></Link>  <Heading color="var(--bg-primary-green)" as="h1">
             Booking Confirmation
           </Heading>
           <Box p={6} rounded="md" w="100%">

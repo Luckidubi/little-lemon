@@ -42,8 +42,14 @@ flex: 1;
     font-size: 32px;
 }
 
+.llemon__OrderList-search{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
 .llemon__OrderList-search input{
-width: 100%;
+
 font-family: var(--font-family);
 margin-bottom: 2rem;
 }

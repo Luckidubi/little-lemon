@@ -40,9 +40,10 @@ function OrderList() {
         <div className="llemon__OrderList-search">
           <Input
             type="search"
-            placeholder="Search Menu"
+            placeholder="Search Menu e.g salad"
             value={search}
             onChange={handleChange}
+            w="md"
           />
         </div>
         <div className="llemon_OrderList-sidebar">
