@@ -7,30 +7,24 @@ import {
   Heading,
   Input,
   Select,
-  HStack,
   VStack,
-
 } from "@chakra-ui/react";
 import { useFormik } from "formik";
 import { useNavigate } from "react-router-dom";
 import * as Yup from "yup";
 import { useBookingContext } from "../../context/BookingContext";
-import "./BookingForm.css"
-
-
+import "./BookingForm.css";
 
 function BookingForm({ availableTimes, updateTimes }) {
+  const { updateBookings } = useBookingContext();
 
-const {updateBookings} = useBookingContext();
-
-const navigate =  useNavigate()
+  const navigate = useNavigate();
 
   const selectTime = availableTimes.map((t, i) => (
     <option key={i + "asdsd54"} value={t}>
       {t}
     </option>
   ));
-
 
   const getDateFormat = () => {
     const date = new Date();
@@ -42,10 +36,7 @@ const navigate =  useNavigate()
 
   const handleDateChange = (e) => {
     updateTimes(new Date(e.target.value));
-
   };
-
-
 
   const formik = useFormik({
     initialValues: {
@@ -54,22 +45,16 @@ const navigate =  useNavigate()
       guests: "",
       occasion: "Birthday",
     },
-    onSubmit:  async (values) => {
-      await updateBookings(values)
+    onSubmit: async (values) => {
+      await updateBookings(values);
 
-
-        navigate("/confirmed");
+      navigate("/confirmed");
       console.log(values);
-
-
     },
     validationSchema: Yup.object({
       date: Yup.date().required("Required"),
       time: Yup.string().required("Required"),
-      guests: Yup.number()
-        .required("Required")
-        .min(1, "Minimum guests is 1")
-        .max(8, "Maximum guests is 8"),
+      guests: Yup.string().required("Required"),
       occasion: Yup.string().required("Required"),
     }),
   });
@@ -118,12 +103,23 @@ const navigate =  useNavigate()
                   isInvalid={formik.touched.guests && formik.errors.guests}
                 >
                   <FormLabel htmlFor="guests">Number of Guests</FormLabel>
-<HStack>
-
-<input type="number" step={1} style={{width:"100%", border:"1px solid", padding:".5rem", borderRadius:"5px"}} id="guests" name="guests" {...formik.getFieldProps("guests")} min={1} max={10} placeholder="Enter Number of Guests"/>
-
-
-</HStack>
+                  <Select
+                    id="guests"
+                    name="guests"
+                    placeholder="Select No. of Guests"
+                    {...formik.getFieldProps("guests")}
+                  >
+                    <option value="1">1 Guest</option>
+                    <option value="2">2 Guests</option>
+                    <option value="3">3 Guests</option>
+                    <option value="4">4 Guests</option>
+                    <option value="5">5 Guests</option>
+                    <option value="6">6 Guests</option>
+                    <option value="7">7 Guests</option>
+                    <option value="8">8 Guests</option>
+                    <option value="9">9 Guests</option>
+                    <option value="10">10 Guests</option>
+                  </Select>
                   <FormErrorMessage>{formik.errors.guests}</FormErrorMessage>
                 </FormControl>
                 <FormControl
@@ -142,13 +138,7 @@ const navigate =  useNavigate()
                   <FormErrorMessage>{formik.errors.occasion}</FormErrorMessage>
                 </FormControl>
 
-                <Button
-
-                  type="submit"
-                  colorScheme="yellow"
-                  width="full"
-                  
-                >
+                <Button type="submit" colorScheme="yellow" width="full">
                   Make Your reservation
                 </Button>
               </VStack>
