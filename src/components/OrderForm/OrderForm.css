@@ -1,0 +1,32 @@
+.llemon__OrderForm{
+    margin-bottom: 3rem;
+}
+    .llemon__OrderForm h1{
+        font-family: var(--font-family2);
+
+    }
+    .llemon__OrderForm label{
+        font-family: var(--font-family2);
+        font-size: 24px;
+    }
+
+    .llemon__OrderForm input::placeholder{
+        font-family: var(--font-family);
+    }
+
+    .llemon__OrderForm input:focus-visible{
+        border-color: var(--bg-primary-green) ;
+        box-shadow: 0 0 0 1px var(--bg-primary-green);
+
+    }
+
+    .llemon__OrderForm button{
+        font-family: var(--font-family);
+        font-size: 18px;
+        margin-top: 2rem;
+
+    }
+    .llemon__OrderForm button:hover{
+        background: var(--bg-secondary-dark);
+        color: var(--bg-secondary-gray)
+    }

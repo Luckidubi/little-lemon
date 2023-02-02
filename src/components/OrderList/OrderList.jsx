@@ -1,15 +1,17 @@
-import { Input } from "@chakra-ui/react";
+import { Input, useMediaQuery } from "@chakra-ui/react";
 import React, { useState } from "react";
 import OrderCard from "../OrderCard/OrderCard";
 import "./OrderList.css";
 import useSearch from "../../hooks/useSearch";
 import { useMenuContext } from "../../context/MenuContext";
 import CartList from "../../components/CartList/CartList";
+import OrderForm from "../OrderForm/OrderForm";
 function OrderList() {
   const { dispatch } = useMenuContext();
 
   const [search, setSearch] = useState("");
   const { searchMenu } = useSearch({ search });
+  const [isLargerThan768] = useMediaQuery('(min-width: 768px)')
 
   const handleChange = (e) => {
     setSearch(e.target.value);
@@ -61,6 +63,7 @@ function OrderList() {
           <aside>
           <h2>Cart List</h2>
             <CartList />
+           {isLargerThan768 ? <OrderForm/> : ""}
           </aside>
         </div>
       </section>
