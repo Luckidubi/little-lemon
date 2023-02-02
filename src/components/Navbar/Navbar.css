@@ -35,7 +35,7 @@ z-index: 1;
 }
 
 .llemon__navbar-links_container p,
-.metabnb__navbar-menu_container-links p {
+.llemon__navbar-menu_container-links p {
   color: #434343;
   font-family: var(--font-family);
   font-size: 20px;
@@ -77,6 +77,11 @@ z-index: 1;
 .llemon__navbar-menu_container-links p {
 
   margin: 1rem 0;
+}
+.llemon__navbar-menu_container-links p:hover {
+
+color : var(--bg-primary-yellow);
+
 }
 
 .scale-up-center {

@@ -15,10 +15,10 @@ function Navbar() {
          <Link to="/"><p>
          Home
         </p></Link>
-        <a href="#About"><p>
+        <Link to="/#About"><p>
           About
-        </p></a>
-        <a href="#Menu"><p>Menu</p></a>
+        </p></Link>
+        <Link to="/online-menu"><p>Menu</p></Link>
         <Link to="/booking">  <p>Reservations</p></Link>
         <Link to='/order'> <p>Order Online</p></Link>
         <p>Login</p>
