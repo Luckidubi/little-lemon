@@ -36,7 +36,7 @@ function ConfirmedBooking() {
       onOpen("error", response?.message);
       console.log(response);
     }
-  }, [response]);
+  }, [response,navigate,onOpen]);
 
   return (
     <>

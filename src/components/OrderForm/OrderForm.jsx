@@ -35,7 +35,7 @@ function OrderForm() {
       onOpen("error", response?.message);
       console.log(response);
     }
-  }, [response]);
+  }, [response,navigate,onOpen]);
 
   const formik = useFormik({
     initialValues: {
