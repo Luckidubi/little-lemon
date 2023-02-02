@@ -11,17 +11,15 @@ export const BookingProvider = ({ children }) => {
   });
 
   const updateBookings = (values) => {
-    const {date, time, guests, occasion} = values
-    setBooking(prev=>({
+    const { date, time, guests, occasion } = values;
+    setBooking((prev) => ({
       ...prev,
       date: date,
       time: time,
       guests: guests,
       occasion: occasion,
-    }))
-  }
-
-  
+    }));
+  };
 
   return (
     <BookingContext.Provider value={{ booking, updateBookings }}>

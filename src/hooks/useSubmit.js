@@ -1,4 +1,4 @@
-import {useState} from "react";
+import { useState } from "react";
 import { submitAPI } from "../api/BookingApi";
 
 // const wait = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
@@ -11,27 +11,26 @@ const useSubmit = () => {
   const [isLoading, setLoading] = useState(false);
   const [response, setResponse] = useState(null);
 
-  const submit =  (data) => {
-
+  const submit = (data) => {
     setLoading(true);
     try {
-       submitAPI(data);
+      submitAPI(data);
 
       setResponse({
-        type: 'success',
+        type: "success",
         message: `Thanks for your submission, we will get back to you shortly!`,
-      })
+      });
     } catch (error) {
       setResponse({
-        type: 'error',
-        message: 'Something went wrong, please try again later!',
-      })
+        type: "error",
+        message: "Something went wrong, please try again later!",
+      });
     } finally {
       setLoading(false);
     }
   };
 
   return { isLoading, response, submit };
-}
+};
 
-export default useSubmit
+export default useSubmit;

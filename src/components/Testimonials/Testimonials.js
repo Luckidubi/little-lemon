@@ -11,8 +11,7 @@ const UserInfo = [
     rating: 5,
     photo: Roy,
     name: "Roy",
-    review:
-      "This is the best Mediterranean food that I've ever had!.",
+    review: "This is the best Mediterranean food that I've ever had!.",
   },
   {
     id: "045jsljfe7",
@@ -43,8 +42,7 @@ const UserInfo = [
     rating: 5,
     photo: Ada,
     name: "Ada",
-    review:
-      "The food here really refreshed me after a late night shift ",
+    review: "The food here really refreshed me after a late night shift ",
   },
 ];
 function Testimonials() {

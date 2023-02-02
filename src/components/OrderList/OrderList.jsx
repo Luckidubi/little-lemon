@@ -11,7 +11,7 @@ function OrderList() {
 
   const [search, setSearch] = useState("");
   const { searchMenu } = useSearch({ search });
-  const [isLargerThan768] = useMediaQuery('(min-width: 768px)')
+  const [isLargerThan768] = useMediaQuery("(min-width: 768px)");
 
   const handleChange = (e) => {
     setSearch(e.target.value);
@@ -62,9 +62,9 @@ function OrderList() {
             </div>
           </main>
           <aside>
-          <h2>Cart List</h2>
+            <h2>Cart List</h2>
             <CartList />
-           {isLargerThan768 ? <OrderForm/> : ""}
+            {isLargerThan768 ? <OrderForm /> : ""}
           </aside>
         </div>
       </section>

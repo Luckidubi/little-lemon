@@ -17,7 +17,7 @@
   font-style: normal;
   font-weight: 500;
   font-size: 64px;
-  margin-bottom:  -2rem;
+  margin-bottom: -2rem;
   color: var(--bg-primary-yellow);
 }
 
@@ -51,8 +51,8 @@
 }
 
 .llemon__header-cta button:hover {
-background: var(--bg-secondary-dark);
-color: var(--bg-secondary-gray);
+  background: var(--bg-secondary-dark);
+  color: var(--bg-secondary-gray);
 }
 
 .llemon__header-image {
@@ -69,24 +69,24 @@ color: var(--bg-secondary-gray);
 }
 
 @media screen and (max-width: 1050px) {
-    .llemon__header {
-      flex-direction: column;
-      gap: 40px;
-    }
-    .llemon__header-content {
-      margin: 0 0 3rem;
-    }
+  .llemon__header {
+    flex-direction: column;
+    gap: 40px;
+  }
+  .llemon__header-content {
+    margin: 0 0 3rem;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .llemon__header-content h1 {
+    font-size: 48px;
+    line-height: 60px;
+    margin-bottom: -1rem;
   }
 
-  @media screen and (max-width: 650px) {
-    .llemon__header-content h1 {
-      font-size: 48px;
-      line-height: 60px;
-      margin-bottom: -1rem;
-    }
-
-    .llemon__header-description {
-      font-size: 16px;
-      line-height: 24px;
-    }
+  .llemon__header-description {
+    font-size: 16px;
+    line-height: 24px;
+  }
 }
