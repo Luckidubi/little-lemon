@@ -1,5 +1,5 @@
 import React from "react";
-import headerImg from "../../assets/restauranfood.jpg";
+import headerImg from "../../assets/restauranfood.webp";
 import "./Header.css";
 import { useNavigate } from "react-router-dom";
 function Header() {
