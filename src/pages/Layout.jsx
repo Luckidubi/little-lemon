@@ -7,7 +7,7 @@ function Layout() {
   return (
     <>
       <Navbar />
-      <Suspense fallback={<Center my="6rem"><Spinner color="var(--bg-primary-green)" size="xl"  /></Center>}>
+      <Suspense fallback={<Center my="6rem"><Spinner color="var(--bg-primary-green)" size="xl" thickness="4px" emptyColor="gray.200" speed="0.75s" /></Center>}>
 
       <Outlet/>
       </Suspense>
